@@ -2,8 +2,8 @@ import sys
 
 import pandas as pd
 
-print(sys.argv)
 
+process_name = sys.argv[0]
 day = sys.argv[1]
 
-print(f'Job Completed for {day}!')
+print(f'Process {process_name} completed for {day}!')
