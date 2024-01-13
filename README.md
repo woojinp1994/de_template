@@ -1,3 +1,3 @@
-# de_learning
+# de_template
 
-A place to document my learnings for DE.
+A template to use for DE projects
