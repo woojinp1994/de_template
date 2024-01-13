@@ -1,6 +1,7 @@
 FROM python:3.11.6
 
-RUN pip install pandas
+RUN apt-get install wget
+RUN pip install pandas sqlalchemy psycopg2
 
 WORKDIR /app
 
