@@ -1,0 +1,18 @@
+docker build -t taxi_ingest:v001 .
+
+URL1="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-09.csv.gz"
+URL2="https://s3.amazonaws.com/nyc-tlc/misc/taxi+_zone_lookup.csv"
+
+docker run -it \
+  --network=docker_default \
+  taxi_ingest:v001 \
+    --user=root \
+    --password=root \
+    --host=pgdatabase \
+    --port=5432 \
+    --db_name=ny_taxi \
+    --table_name1=green_taxi_trips \
+    --url1=${URL1} \
+    --table_name2=taxi_zones \
+    --url2=${URL2}
+
