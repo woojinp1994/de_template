@@ -1,3 +1,3 @@
-# de_template
+# de_learning
 
-A template to use for DE projects
+A place to document my learnings from DE zoomcamp.
